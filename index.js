@@ -5,12 +5,15 @@ import cookieParser from "cookie-parser";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
+//mangodb connection
 mongoose
-  .connect("mongodb://127.0.0.1:27017", {
-    dbName: "backend",
+  .connect('mongodb://127.0.0.1:27017/medistopdatabase', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
   })
-  .then(() => console.log("Database Connected"))
-  .catch((e) => console.log(e));
+  .then(() => console.log('database connected'))  
+  .catch(e => console.log(e))
+  
 
 const userSchema = new mongoose.Schema({
   name: String,
@@ -54,6 +57,15 @@ app.get("/login", (req, res) => {
 app.get("/register", (req, res) => {
   res.render("register");
 });
+app.get("/prescription",(req,res)=>{
+res.render("prescription")
+})
+app.get("/schemes",(req,res)=>{
+  res.render("scheme")
+  })
+  app.get("/appointment",(req,res)=>{
+    res.render("appoint")
+    })
 
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
@@ -107,6 +119,8 @@ app.get("/logout", (req, res) => {
   });
   res.redirect("/");
 });
+
+
 
 app.listen(5000, () => {
   console.log("Server is working");

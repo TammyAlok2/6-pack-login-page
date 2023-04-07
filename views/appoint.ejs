@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Title-->
+    <title>CRUD-JS</title>
+     <!-- CSS File-->
+ <link rel="stylesheet" href="appoint.css">   
+</head>
+<body bgcolor=" rgb(79 70 229);;">
+	<CENTER><h2 style="font-size :xx-large">Appointment </h2></CENTER>
+    <!--Table-->
+    <div id="alert"> <b>Submitted Successfully</b>
+        <img src="https://cdn.vectorstock.com/i/preview-1x/14/99/green-tick-marker-checkmark-circle-icon-vector-22691499.webp" alt="" id="image">
+    </div>
+    <table>
+        <!--Row-1-->
+        <tr>
+            <!--Column-1-->
+            <td>
+                <!--Form-->
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                	<h3>Appointment Form</h3>
+                  <!--div-1-->
+                    <div>
+                        <label>Patient Name</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="userNamevalidationError">This field is required</label>
+                        <!--Input User Name-->
+                        <input type="text" name="userName" id="userName" placeholder="Enter the user Name">
+                    </div>
+                    <!--div-2-->
+                    <div>
+                        <label>Father's Name </label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="rollNovalidationError" >This field is required</label>
+                        <!--Input Roll No-->
+                        <input type="text" name="rollNo" id="rollNo" placeholder="Enter the Roll number">
+                    </div>
+                    <!--div-3-->
+                    <div>
+                        <label>Student Class</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="stdClassvalidationError">This field is required</label>
+                       <!--Input Student Class-->
+                        <input type="text" name="stdClass" id="stdClass" placeholder="Enter the Student Class">
+                    </div>
+                    <!--div-4-->
+                    <div>
+                        <label>Address</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="tsubvalidationError">This field is required</label>
+                        <!--Input Total Subject-->
+                        <input type="number" name="tsub" id="tsub" placeholder="Enter the Total Subjects">
+                    </div>
+                    <!--div-5-->
+                    <div>
+                        <label>Mobile Number</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="agevalidationError">This field is required</label>
+                        <!--Input Age-->
+                        <input type="number" name="age" id="age" placeholder="Enter the Age">
+                    </div>
+        
+                    <!--div-6-->
+                    <div class="form-action-buttons">
+                        <!--Input Button-->
+                      <button type="submit " onclick="lw()">Submit</button>
+                    </div>
+                </form>
+            </td>
+            <!--Column-2-->
+            <td>
+                <!--Nested Table-->
+                <table class="list" id="stdlist" style="background-color: #C2976D;">
+                    <!--Table Head-->
+                    <thead>
+                        <!--Row-2-->
+                        <tr>
+                            <th>Patient Name</th>
+                            <th> Father Name</th>
+                            <th>Address</th>
+                            <th>Mobile Number</th>
+                            <th>Age</th>
+                            <th>Changes</th>
+                        </tr>
+                    </thead>
+                    <!--Table Body-->
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- JS File-->
+<script src="appoint.js"></script>
+
+    
+</body>
+</html>

@@ -1,16 +1,218 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Login</title>
+    <title>Medistop</title>
+    <!-- <link rel="shortcut icon" href="./assets/creop.png" type="image/x-icon"> -->
+    <!-- fontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Source+Serif+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="fevicon icon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="home.css" />
   </head>
   <body>
-    <h1>Hi, <%= name %></h1>
-    <form action="/logout" method="get">
-      <button type="submit">Logout</button>
-    </form>
+    <!-- navigation -->
+    <nav>
+      <a href="#home"><img src="creop.png" alt="logo.png" /></a>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/appointment">Appointment</a></li>
+          <li><a href="/Report">Patient History</a></li>
+          <li><a href="/prescription">Prescription</a></li>
+          <li><a href="/Schemes">Schemes</a></li>
+          <li><a href="/logout">LOGOUT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- side navigation -->
+    <div id="sideNav">
+      <nav>
+        <h1>HI <%= name %>  </h1>
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/appointment">Appointment</a></li>
+          <li><a href="/Report">Patient History</a></li>
+          <li><a href="/prescription">Prescription</a></li>
+          <li><a href="/Schemes">Schemes</a></li>
+          <li><a href="/logout">LOGOUT</a></li>
+          <form action="/logout" method="get">
+            <button type="submit">Logout</button>
+        </ul>
+      </nav>
+    </div>
+    <div id="nav-bar">
+      <i class="fa-solid fa-bars" id="menu-bar"></i>
+    </div>
+
+    <!-- main section one -->
+    <main class="one">
+      <div class="menu">
+        <span id="login-span"
+          ><a href="/login" id="login-anchor">Log In</a></span
+        >
+        <div class="line"></div>
+        <span
+          ><a href="/register" id="Registration-anchor"
+            >Sign Up</a
+          ></span
+        >
+      </div>
+    </main>
+
+    <!--  section two -->
+    <section class="section-two">
+      <div class="textMsg">
+        <h1>Leading Medicine</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione iure
+          suscipit quos necessitatibus <br />
+          labore, fugit accusamus. Cum pariatur tenetur neque cumque, est libero
+          dolor rem assumenda consectetur deleniti, magnam eos?
+        </p>
+      </div>
+
+      <div class="maincards">
+        <div class="cards">
+          <div class="card">
+            <div class="head">
+              <div class="profile"><i class="fa-solid fa-user-group"></i></div>
+              <h4>Emergency Case</h4>
+            </div>
+            <div class="main"></div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div class="profile"><i class="fa-solid fa-user-group"></i></div>
+              <h4>Cancer Care</h4>
+            </div>
+            <div class="main"></div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div class="profile"><i class="fa-solid fa-user-group"></i></div>
+              <h4>Health Queries</h4>
+            </div>
+            <div class="main"></div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div class="profile"><i class="fa-solid fa-user-group"></i></div>
+            </div>
+            <div class="main"></div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div class="profile">
+                <i class="fa-solid fa-user-group"></i>
+              </div>
+            </div>
+            <div class="main"></div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div class="profile">
+                <i class="fa-solid fa-user-group"></i>
+              </div>
+            </div>
+            <div class="main"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section three -->
+
+    <section class="three-sec">
+      <div class="textMsg">
+        <h1>Leading Medicine</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione iure
+          suscipit quos necessitatibus <br />
+          labore, fugit accusamus. Cum pariatur tenetur neque cumque, est libero
+          dolor rem assumenda consectetur deleniti, magnam eos?
+        </p>
+      </div>
+
+        <div class="maincards">
+        <div class="cards">
+          <div class="card">
+            <div class="head">
+              <div class="profile"><i class="fa-solid fa-user-group"></i></div>
+              <h4>Emergency Case</h4>
+            </div>
+            <div class="main"></div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div class="profile"><i class="fa-solid fa-user-group"></i></div>
+              <h4>Cancer Care</h4>
+            </div>
+            <div class="main"></div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div class="profile"><i class="fa-solid fa-user-group"></i></div>
+              <h4>Health Queries</h4>
+            </div>
+            <div class="main"></div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div class="profile"><i class="fa-solid fa-user-group"></i></div>
+            </div>
+            <div class="main"></div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div class="profile">
+                <i class="fa-solid fa-user-group"></i>
+              </div>
+            </div>
+            <div class="main"></div>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div class="profile">
+                <i class="fa-solid fa-user-group"></i>
+              </div>
+            </div>
+            <div class="main"></div>
+          </div>
+        </div>
+      </div>
+
+     
+    </section>
+
+    <script src="home.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
